@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        #calculator {
+            border: 1px solid rgb(183, 173, 173);
+            width: 200px;
+            border-radius:5px;
+        }
+
+        #display {
+            width: 85%;
+            margin: 10px;
+            font-size: 2rem;
+        }
+
+        #button-c {
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .c1 {
+            height: 45px;
+            width: 45px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        
+        <input type="text" id="display" readonly>
+        <div id="button-c">
+            <button class ="c1"
+            onclick="cureentDisplay='';
+            document.querySelector('#display').value=cureentDisplay">c</button>
+            <button class="c1" onclick="cureentDisplay =cureentDisplay+'1';
+            document.querySelector('#display').value=cureentDisplay">1</button>
+            <button class="c1" onclick="cureentDisplay=cureentDisplay+'2';
+            document.querySelector('#display').value=cureentDisplay">2</button>
+            <button class="c1" 
+            onclick="cureentDisplay=cureentDisplay+'+';
+            document.querySelector('#display').value=cureentDisplay">+</button>
+            <button class="c1" onclick="cureentDisplay=cureentDisplay+'3';
+            document.querySelector('#display').value=cureentDisplay">3</button>
+            <button class="c1"
+            onclick="cureentDisplay=cureentDisplay+'4';
+            document.querySelector('#display').value=cureentDisplay">4</button>
+            <button class="c1"
+            onclick="cureentDisplay=cureentDisplay+'-';
+            document.querySelector('#display').value=cureentDisplay">-</button>
+            <button class="c1"
+            onclick="cureentDisplay=cureentDisplay+'5';
+            document.querySelector('#display').value=cureentDisplay">5</button>
+            <button class="c1"
+            onclick="cureentDisplay=cureentDisplay+'6';
+            document.querySelector('#display').value=cureentDisplay">6</button>
+            <button class="c1"
+            onclick="cureentDisplay=cureentDisplay+'*';
+            document.querySelector('#display').value=cureentDisplay">*</button>
+            <button class="c1"
+            onclick="cureentDisplay=cureentDisplay+'7';
+            document.querySelector('#display').value=cureentDisplay">7</button>
+            <button class="c1"
+            onclick="cureentDisplay=cureentDisplay+'8';
+            document.querySelector('#display').value=cureentDisplay">8</button>
+            <button class="c1"
+            onclick="cureentDisplay=cureentDisplay+'/';
+            document.querySelector('#display').value=cureentDisplay">/</button>
+            <button class="c1" onclick="cureentDisplay=eval(cureentDisplay);
+            document.querySelector('#display').value=cureentDisplay">=</button>
+            <button class="c1" onclick="cureentDisplay=cureentDisplay+'-';
+            document.querySelector('#display').value=cureentDisplay">9</button>
+            <button class="c1"
+            onclick="cureentDisplay=cureentDisplay+'0';
+            document.querySelector('#display').value=cureentDisplay">0</button>
+            <button class="c1"
+            onclick="cureentDisplay=cureentDisplay+'.';
+            document.querySelector('#display').value=cureentDisplay">.</button>
+        </div>
+    </div>
+    
+    <script>
+        let cureentDisplay = " ";
+        document.querySelector("#display").value =cureentDisplay;
+    </script>
+</body>
+</html>
